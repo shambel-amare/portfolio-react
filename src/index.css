@@ -4,6 +4,7 @@
     --link-color: #0155f2;
     --color-secondary: #367cff;
     --color-logo:#011439;
+    --color-background: #F3F3F3;
     --container-width-lg:75%;
     --container-width-md:85%;
     --container-height-sm:90%;
@@ -32,6 +33,7 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
+    background: var(--color-background);
 }
 
 /* =======GENERAL CSS */

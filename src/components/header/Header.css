@@ -47,7 +47,7 @@
     height: 4rem;
     background: var(--color-primary);
 }
-.header__socials::before{
+/* .header__socials::before{
     position: absolute;
     left: 50%;
     top: -85%;
@@ -55,7 +55,7 @@
     width: 2px;
     height: 3.75rem;
     background: var(--color-primary);
-}
+} */
 .header__socials >a{
     display: block;
 }
