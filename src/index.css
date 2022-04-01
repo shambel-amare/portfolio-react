@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+:root {
+    --color-primary: #0084f8;
+    --link-color: #0155f2;
+    --color-secondary: #367cff;
+    --color-logo:#011439;
+    --container-width-lg:75%;
+    --container-width-md:85%;
+    --container-height-sm:90%;
+    --color-white: #fff;
+    --color-light-gray: #8DDBE0;
+    --color-light: rbga(1,1,1,0.6);
+    --color-black: #0000;
+    --color-ghost:#5A4FF3;
+
+    --transition: all 400ms ease;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =======GENERAL CSS */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    /* margin: 0 1rem; */
+    margin-top: 4rem;
+}
+h1,h2,h3,h4,h5{
+    font-weight: 500;
+}
+h1{
+    font-size: 2rem;
+    color: var(--color-logo);
+}
+h2{
+    font-size: 1rem;
+}
+section >h2, section >h5{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+section > h2{
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+}
+.text-light{
+    color:var(--color-light);
+}
+a {
+    color: var(--link-color);
+    transition:var(--transition);
+}
+a:hover{
+    color:var(--color-white);
+
+}
+.btn {
+    width: max-content;
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    margin:0.4rem 0.75rem;
+    margin-left: 0;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+}
+.btn:hover{
+    background: var(--color-white);
+    border:1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+.btn-secondary{
+    background: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+.btn-secondary:hover{
+    background: var(--color-white);
+    color: var(--color-logo);
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+/* ========Media Queries for Tablet(Medium size devices) =======*/
+
+@media screen and (max-width: 1024px) {
+    .container{
+        width:var(--container-width-md)
+    }
+    .section{
+        margin-bottom: 5rem;
+    }
+}
+
+
+/* ========Media Queries for phones (small size devices)====== */
+@media screen and (max-width: 600px ){
+    .container{
+        width:var(--container-width-sm)
+    }
+    .section{
+        margin-bottom: 2rem;
+    }
+}
