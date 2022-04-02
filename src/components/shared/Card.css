@@ -1,27 +1,13 @@
-#about > h1 {
-  color: var(--color-primary);
-}
-.about__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  width: max-content;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 1.5rem;
-  margin-bottom: 5rem;
-}
 .card {
   background-image: url(../../assets/card-img1.jpg);
   background-size: cover;
   border-radius: 0.5rem;
   color: var(--color-white);
   max-width: 35ch;
-  padding: 8rem 0 0;
+  padding: 10rem 0 0;
   overflow: hidden;
   transition: var(--transition);
 }
-
 .card-content {
   /* Locally scoped variable */
   --padding: 1rem;
@@ -34,7 +20,6 @@
     hsl(0 0% 0% /1)
   );
 }
-
 .card-title {
   position: relative;
   align-self: center;
@@ -45,15 +30,12 @@
 .card-title::after {
   content: "";
   position: absolute;
-  left: calc(var(--padding) * -8);
+  left: calc(var(--padding) * -1);
   bottom: 0;
   height: 4px;
-  width: calc(100% + 8 * var(--padding));
+  width: calc(100% + 2 * var(--padding));
   background: var(--color-primary);
-  transform-origin: left;
-  transition: var(--transition);
 }
-
 .card-body {
   color: rgba(255, 255, 255, 0.8);
 }
@@ -73,6 +55,7 @@
   background: var(--color-primary);
   background-size: cover;
   border-radius: 50%;
+  transform: translateX(-20%);
   font-size: 2rem;
 }
 .card-icon > a {
@@ -92,49 +75,4 @@
   font-size: 1rem;
   word-spacing: 0.2rem;
   letter-spacing: 0.1em;
-}
-
-@media (hover) {
-  .card-content {
-    transform: translatey(65%);
-    transition: var(--transition);
-  }
-  .card:hover,
-  .card:focus-within {
-    transform: scale(1.05);
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
-  }
-  .card:hover .card-content,
-  .card:focus-within .card-content {
-    transform: translateY(0%);
-    transition-delay: 500ms;
-  }
-  .card:focus-within .card-content {
-    transition-duration: 0ms;
-  }
-  .card-content > *:not(.card-title) {
-    opacity: 0;
-    transition: var(--transition);
-  }
-  .card:hover .card-content > *:not(.card-title) {
-    opacity: 1;
-    transition-delay: 800ms;
-  }
-  .card:hover .card-title::after,
-  .card:focus-within .card-title::after {
-    transform: scaleX(1);
-  }
-  .card-title::after {
-    transform: scaleX(0);
-  }
-}
-@media screen and (max-width: 1024px) {
-  .about__container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media screen and (max-width: 600px) {
-  .about__container {
-    grid-template-columns: repeat(1, 1fr);
-  }
 }
