@@ -1,0 +1,24 @@
+.skill-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 40ch;
+  height: 40ch;
+  background: #a5c4ff;
+}
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: flex-start;
+  gap: 0.5rem 2rem;
+  padding: 0 1rem;
+}
+.skill-item {
+  display: block;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+}

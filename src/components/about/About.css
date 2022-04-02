@@ -1,5 +1,5 @@
 #about > h1 {
-  color: var(--color-primary);
+  letter-spacing: 0px;
 }
 .about__container {
   display: grid;
@@ -9,7 +9,6 @@
   overflow: hidden;
   margin: 0 auto;
   padding: 1.5rem;
-  margin-bottom: 5rem;
 }
 .card {
   background-image: url(../../assets/card-img1.jpg);
@@ -128,9 +127,30 @@
     transform: scaleX(0);
   }
 }
+.my-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  background: transparent;
+  border-radius: 0.5rem;
+  color: var(--color-primary);
+  max-width: 115ch;
+  overflow: hidden;
+  margin: 0.3rem auto;
+  padding: 0 1.5rem;
+}
+.my-content > p {
+  width: 100%;
+  grid-column: 1/4;
+}
+
 @media screen and (max-width: 1024px) {
   .about__container {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .my-content {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 40ch;
   }
 }
 @media screen and (max-width: 600px) {
