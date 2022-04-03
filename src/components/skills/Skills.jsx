@@ -9,10 +9,10 @@ const Skills = () => {
       <h5>Skills I have</h5>
       <h1>EXPERIENCE</h1>
       <div className="skill-container">
-        <ListingCard title="Frontend Development" skill={SkillData.frontEnd}>
+        <ListingCard title="Frontend" skill={SkillData.frontEnd}>
           <h5>Experienced</h5>
         </ListingCard>
-        <ListingCard title="Backend Development" skill={SkillData.backEnd}>
+        <ListingCard title="Backend" skill={SkillData.backEnd}>
           <h5>Experienced</h5>
         </ListingCard>
         <ListingCard title="Design" skill={SkillData.design}>

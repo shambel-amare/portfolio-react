@@ -1,11 +1,7 @@
-#contact {
-  justify-self: center;
-}
-.contact-container {
+.contact__container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-self: center;
   margin: 1rem auto;
   gap: 2rem;
 }
@@ -14,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 100ch;
 }
 .form {
   display: flex;
@@ -25,20 +22,31 @@
   padding: 1rem 1.5rem;
 }
 .form-input {
-  width: 20rem;
+  width: 80%;
   height: 2rem;
   border: 1px solid var(--color-primary);
   border-radius: 0.5rem;
   padding: 1rem 1.5rem;
 }
 .message {
-  width: 30rem;
+  width: 100%;
   border: 1px solid var(--color-primary);
   border-radius: 0 0.5rem 0.5rem 0;
 }
-.contact-content {
-  display: flex;
-  flex-direction: column;
+.content__container {
   align-items: center;
+  justify-content: center;
+  height: fit-content;
   color: var(--color-logo);
+  border: 1px solid var(--color-primary);
+}
+@media screen and(max-width:1024px) {
+  .contact__container {
+    flex-direction: column;
+  }
+}
+@media screen and(max-width:600px) {
+  .contact-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
