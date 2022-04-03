@@ -1,5 +1,22 @@
 export const SkillData = {
-  frontEnd: ["HTML", "CSS", "Javascript", "Bootstrap", "React", "Material UI"],
-  backEnd: ["HTML", "CSS", "Javascript", "Bootstrap", "React", "Material UI"],
-  design: ["HTML", "CSS", "Javascript", "Bootstrap"],
+  frontEnd: [
+    "HTML",
+    "CSS",
+    "Javascript",
+    "Bootstrap",
+    "React with Redux",
+    "Next Js",
+    "Material UI",
+  ],
+  backEnd: [
+    "Node Js",
+    "Express",
+    "Django",
+    "Bootstrap",
+    "MongoDB",
+    "MySQL",
+    "Firebase",
+    "Strapi",
+  ],
+  design: ["Figma Design", "Adobe XD", "Photoshop"],
 };

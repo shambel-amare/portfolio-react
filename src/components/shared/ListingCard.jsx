@@ -6,13 +6,17 @@ const ListingCard = ({ title, skill, children }) => {
   return (
     <>
       <div className="skill-box">
-        <h1>{title}</h1>
+        <div className="skill-title">
+          <h1>{title}</h1>
+        </div>
         <div className="skill-list">
           {skill.map((skillItem, index) => {
             return (
               <div key={index} className="skill-item">
                 <div className="content">
-                  <AiFillSafetyCertificate />
+                  <div className="content-icon">
+                    <AiFillSafetyCertificate />
+                  </div>
                   <h2>{skillItem}</h2>
                 </div>
                 {children}

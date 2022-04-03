@@ -13,7 +13,8 @@
   --color-light: rbga(1, 1, 1, 0.6);
   --color-black: #0000;
   --color-ghost: #5a4ff3;
-
+  --color-nav: #d7e5ff;
+  --color-navactive: #a5c4ff;
   --transition: all 500ms ease;
 }
 *,
