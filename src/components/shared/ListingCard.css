@@ -148,8 +148,9 @@
 }
 @media screen and (max-width: 600px) {
   .skill-box {
-    width: 40ch;
+    width: 35ch;
     justify-content: center;
+    align-items: center;
   }
 
   .skill-title {

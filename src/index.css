@@ -45,9 +45,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vh;
-  /* margin: 0 1rem; */
-  margin-top: 4rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
 }
 h1,
 h2,
@@ -64,7 +64,7 @@ h2 {
   font-size: 1rem;
 }
 section {
-  margin-top: 4rem;
+  margin: 1rem auto;
   height: auto;
 }
 section > h2,
@@ -129,17 +129,24 @@ img {
 
 @media screen and (max-width: 1024px) {
   .container {
-    width: var(--container-width-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .section {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 }
 
 /* ========Media Queries for phones (small size devices)====== */
 @media screen and (max-width: 600px) {
   .container {
-    width: var(--container-width-sm);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
   }
   .section {
     margin-bottom: 2rem;

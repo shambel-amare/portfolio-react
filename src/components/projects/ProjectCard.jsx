@@ -4,28 +4,32 @@ import { FaCode } from "react-icons/fa";
 import "./Projects.css";
 const ProjectCard = () => {
   return (
-    <div className="card">
-      <div className="card-content">
-        <h2 className="card-title">Education</h2>
-        <div className="card-body">
-          <div className="card-icon">
-            <a href="#">
-              <MdCastForEducation />
-            </a>
-            <div className="edu">
-              <h3>BSc. Electro-mech' Eng</h3>
-              <h3>MSc. Mechatronics Eng</h3>
+    <section id="project-card">
+      <div className="projectcard-container">
+        <div className="card">
+          <div className="card-content">
+            <h2 className="card-title">Education</h2>
+            <div className="card-body">
+              <div className="card-icon">
+                <a href="#">
+                  <MdCastForEducation />
+                </a>
+                <div className="edu">
+                  <h3>BSc. Electro-mech' Eng</h3>
+                  <h3>MSc. Mechatronics Eng</h3>
+                </div>
+              </div>
+              <div className="card-icon">
+                <a href="#">
+                  <FaCode />
+                </a>
+                <h3>Self tought Developer/ Designer</h3>
+              </div>
             </div>
-          </div>
-          <div className="card-icon">
-            <a href="#">
-              <FaCode />
-            </a>
-            <h3>Self tought Developer/ Designer</h3>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -5,7 +5,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  width: max-content;
   overflow: hidden;
   margin: 0 auto;
   padding: 1.5rem;
@@ -146,15 +145,30 @@
 
 @media screen and (max-width: 1024px) {
   .about__container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.5rem;
   }
   .my-content {
-    grid-template-columns: repeat(1, 1fr);
-    max-width: 40ch;
+    display: flex;
+    justify-content: center;
+    max-width: 50ch;
   }
 }
 @media screen and (max-width: 600px) {
   .about__container {
+    margin: 0.5rem auto;
+    padding: 0;
+  }
+  .card {
+    width: 33ch;
+  }
+  .my-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about__container {
+    padding: 0;
     grid-template-columns: repeat(1, 1fr);
   }
 }

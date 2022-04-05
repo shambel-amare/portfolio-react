@@ -8,30 +8,39 @@ import Socials from "../shared/Socials";
 
 const Header = () => {
   return (
-    <header className="wrapper">
-      <Socials />
-      <div className="header__container">
-        <h5>Hello, I'm</h5>
-        <div className="name">
-          <h1>Shambel</h1>
-          <h2>Amare</h2>
+    <header id="header">
+      <div className="container">
+        <div className="wrapper">
+          <Socials />
+          <div className="header__container">
+            <h5>Hello, I'm</h5>
+            <div className="name">
+              <h1>Shambel</h1>
+              <h2>Amare</h2>
+            </div>
+            <div className="title">
+              <a href="#">Fullstack </a>
+              <a href="#">Developer / </a>
+              <a href="#">Designer</a>
+            </div>
+            <div className="buttons">
+              <CTA
+                className="btn"
+                downloadable
+                link={Resume}
+                text="Download CV"
+              />
+              <CTA
+                className="btn btn-secondary"
+                link="#contact"
+                text="Get In touch"
+              />
+            </div>
+          </div>
+          <div className="img__container">
+            <img src={HomeImage} alt="" />
+          </div>
         </div>
-        <div className="title">
-          <a href="#">Fullstack </a>
-          <a href="#">Developer / </a>
-          <a href="#">Designer</a>
-        </div>
-        <div className="buttons">
-          <CTA className="btn" downloadable link={Resume} text="Download CV" />
-          <CTA
-            className="btn btn-secondary"
-            link="#contact"
-            text="Get In touch"
-          />
-        </div>
-      </div>
-      <div className="img__container">
-        <img src={HomeImage} alt="" />
       </div>
     </header>
   );

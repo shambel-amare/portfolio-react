@@ -1,11 +1,16 @@
-.about__container {
+#project-card {
+  margin: 0 auto;
+}
+.project__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  width: max-content;
   overflow: hidden;
   margin: 0 auto;
   padding: 1.5rem;
+}
+.projectcard-container {
+  align-items: center;
 }
 .card {
   background-image: url(../../assets/card-img1.jpg);
@@ -127,12 +132,13 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .about__container {
-    grid-template-columns: repeat(1, 1fr);
+  .project__container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 600px) {
-  .about__container {
+@media (max-width: 600px) {
+  .project__container {
     grid-template-columns: repeat(1, 1fr);
+    padding: 0;
   }
 }

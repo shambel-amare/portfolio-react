@@ -3,12 +3,15 @@ import ProjectCard from "./ProjectCard";
 const Projects = () => {
   return (
     <section id="projects">
-      <h5>Here are some of my</h5>
-      <h1>PROJECTS</h1>
-      <div className="about__container">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+      <div className="container">
+        <h5>Here are some of my</h5>
+        <h1>PROJECTS</h1>
+        <div className="project__container">
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,11 @@
-nav {
-  background: var(--color-nav);
+.nav__container {
+  display: flex;
+  width: var(--container-width-sm);
+  align-items: center;
+  justify-content: center;
+}
+#nav {
+  background: #d7e5ff;
   width: max-content;
   display: block;
   padding: 0.7rem 1.2rem;
@@ -15,10 +21,10 @@ nav {
 }
 nav a {
   background: transparent;
-  padding: 0.7rem;
+  padding: 0.9rem;
   border-radius: 50%;
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: var(--color-primary);
 }
 nav a:hover {
@@ -27,4 +33,26 @@ nav a:hover {
 nav a.active {
   background: var(--color-navactive);
   color: var(--color-primary);
+}
+
+@media screen and (max-width: 1024px) {
+  .nav__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  #nav {
+    left: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
 }
