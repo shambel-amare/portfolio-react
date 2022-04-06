@@ -5,7 +5,7 @@ let navbar = document.querySelector(".navbar__container");
 console.log(navbar);
 window.onscroll = function () {
   // pageYOffset or scrollY
-  if (window.pageYOffset > 0) {
+  if (window.pageYOffset > 200) {
     navbar.classList.add("scrolled");
   } else {
     navbar.classList.remove("scrolled");

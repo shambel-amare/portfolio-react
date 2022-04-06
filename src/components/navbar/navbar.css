@@ -6,11 +6,11 @@
   height: 6rem;
   top: 0;
   margin-bottom: 1rem;
-  background: transparent;
+  background: var(--color-primary);
   position: fixed;
   z-index: 100;
   transition: var(--transition);
 }
 .navbar__container.scrolled {
-  background: var(--color-primary);
+  background: transparent;
 }
