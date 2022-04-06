@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -6,6 +6,18 @@ import "./Contact.css";
 import { toast } from "react-toastify";
 const Contact = () => {
   const form = useRef();
+  const [value, setValue] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    sendEmail();
+    setValue(e.tagret.value);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -60,29 +72,29 @@ const Contact = () => {
               </div>
             </div>
             <div className="form-container">
-              <form ref={form} onSubmit={sendEmail} className="form">
+              <form ref={form} onSubmit={onSubmit} className="form">
                 <input
                   type="text"
-                  name="name"
+                  name={value.name}
                   placeholder="Name"
                   className="form-input"
                   required
                 />
                 <input
                   type="email"
-                  name="email"
+                  name={value.email}
                   placeholder="Email"
                   className="form-input"
                   required
                 />
                 <input
                   type="text"
-                  name="subject"
+                  name={value.subject}
                   placeholder="Subject"
                   className="form-input"
                 />
                 <textarea
-                  name="message"
+                  name={value.message}
                   id=""
                   cols="30"
                   rows="10"

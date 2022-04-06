@@ -1,13 +1,23 @@
-import React from 'react'
+import React from "react";
+import "./Navbar.css";
 
-const navbar = () => {
+let navbar = document.querySelector(".navbar__container");
+console.log(navbar);
+window.onscroll = function () {
+  // pageYOffset or scrollY
+  if (window.pageYOffset > 0) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+};
+
+const Navbar = () => {
   return (
-    <section id="navbar">
-        <div className="nav__container">
-            
-        </div>
-    </section>
-  )
-}
+    <div id="myNav">
+      <div className="navbar__container"></div>
+    </div>
+  );
+};
 
-export default navbar
+export default Navbar;

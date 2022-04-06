@@ -1,0 +1,16 @@
+#myNav {
+  position: relative;
+}
+.navbar__container {
+  width: 100%;
+  height: 6rem;
+  top: 0;
+  margin-bottom: 1rem;
+  background: transparent;
+  position: fixed;
+  z-index: 100;
+  transition: var(--transition);
+}
+.navbar__container.scrolled {
+  background: var(--color-primary);
+}

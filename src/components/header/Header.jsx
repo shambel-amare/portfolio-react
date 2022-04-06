@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../shared/Button";
 import CTA from "../shared/CTA";
 import "./Header.css";
-import HomeImage from "../../assets/HomeImage.svg";
+import HomeImage from "../../assets/avatar1.svg";
 import Resume from "../../assets/resume.pdf";
 import Socials from "../shared/Socials";
 

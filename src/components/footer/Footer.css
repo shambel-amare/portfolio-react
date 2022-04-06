@@ -1,6 +1,6 @@
 .footer-container {
   height: auto;
-  background: hsla(208, 75%, 42%, 0.839);
+  background: var(--color-nav);
   padding-bottom: 4rem;
   width: 100%;
 }
