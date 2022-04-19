@@ -8,10 +8,15 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   gap: 1.5rem;
   width: 100%;
 }
+.title-container-cover {
+  align-self: flex-start;
+  padding: 1.5rem 6rem;
+}
+
 @media screen and (max-width: 1024px) {
   .skill-container {
     flex-direction: column;

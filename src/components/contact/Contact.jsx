@@ -46,31 +46,14 @@ const Contact = () => {
   return (
     <section id="contact">
       <div className="container">
+        <div className="title-container-cover">
+          <div className="titlebar">
+            <h1>05: </h1>
+            <h1>Contact me</h1>
+          </div>
+        </div>
         <div className="contact-wrapper">
-          <h4>For any of my services</h4>
-          <h1>Contact Me!</h1>
           <div className="contact-container">
-            <div className="content-container">
-              <div className="contact-option">
-                <MdEmail fill="#0084f8" />
-                <h4>Email</h4>
-                <h5>shambelamare2006@gmail.com</h5>
-                <a href="mailto:shambelamare2006@gmail.com" target="_blank">
-                  Send a Message!
-                </a>
-              </div>
-
-              <div className="contact-option">
-                <FaWhatsappSquare fill="green" />
-                <h4>Whatsapp</h4>
-                <a
-                  href="https://api.whatsapp.com/send?phone+251983327298"
-                  target="_blank"
-                >
-                  Send a Message!
-                </a>
-              </div>
-            </div>
             <div className="form-container">
               <form ref={form} onSubmit={onSubmit} className="form">
                 <input
@@ -104,6 +87,31 @@ const Contact = () => {
                 ></textarea>
                 <input className="btn" type="submit" value="Send" />
               </form>
+            </div>
+            <div className="content-container">
+              <div className="contact-option">
+                <MdEmail fill="#0084f8" />
+                <h5>shambelamare2006@gmail.com</h5>
+                <a
+                  href="mailto:shambelamare2006@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Send a Message!
+                </a>
+              </div>
+
+              <div className="contact-option">
+                <FaWhatsappSquare fill="green" />
+                <h4>Whatsapp</h4>
+                <a
+                  href="https://api.whatsapp.com/send?phone+251983327298"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Send a Message!
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -9,6 +9,13 @@
   margin: 0 auto;
   padding: 1.5rem;
 }
+.container-lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 10rem;
+}
 .card {
   background-image: url(../../assets/card-img1.jpg);
   background-size: cover;
@@ -92,6 +99,45 @@
   letter-spacing: 0.1em;
 }
 
+.my-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  background: transparent;
+  border-radius: 0.5rem;
+  color: var(--color-light);
+  width: 50%;
+  overflow: hidden;
+  padding-top: 1rem;
+  padding: 1rem 0;
+  padding-left: 1.5rem;
+}
+.my-content > p {
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+.about-block {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.about-pic {
+  background: url(../../assets/About-picture.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+  min-width: 400px;
+  border-radius: 4px;
+  padding: 5px;
+  min-height: 400px;
+}
+
+.my-content > p > span {
+  color: var(--color-primary);
+}
 @media (hover) {
   .card-content {
     transform: translatey(65%);
@@ -126,24 +172,14 @@
     transform: scaleX(0);
   }
 }
-.my-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  background: transparent;
-  border-radius: 0.5rem;
-  color: var(--color-primary);
-  max-width: 115ch;
-  overflow: hidden;
-  margin: 0.3rem auto;
-  padding: 0 1.5rem;
-}
-.my-content > p {
-  width: 100%;
-  grid-column: 1/4;
-}
 
 @media screen and (max-width: 1024px) {
+  #about {
+    height: 100%;
+  }
+  .container-lead {
+    padding: 0 5rem;
+  }
   .about__container {
     grid-template-columns: repeat(2, 1fr);
     padding: 0.5rem;
@@ -151,10 +187,30 @@
   .my-content {
     display: flex;
     justify-content: center;
-    max-width: 50ch;
+    align-items: center;
+    width: 75%;
+  }
+  .my-content > p {
+    font-family: open sans;
+    font-size: 18px;
+    color: var(--color-light);
+  }
+  .about-block {
+    width: 100%;
+  }
+  .about-pic {
+    background: url(../../assets/About-pic-sm.png);
+    background-repeat: no-repeat;
+    min-width: 100px;
+    border-radius: 4px;
+    padding: 5px;
+    height: 100px;
   }
 }
 @media screen and (max-width: 600px) {
+  .container-lead {
+    padding: 0 1rem;
+  }
   .about__container {
     margin: 0.5rem auto;
     padding: 0;
@@ -166,7 +222,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0.5rem 1rem;
+    width: 100%;
+    height: auto;
+    color: var(--color-light);
+  }
+  .about-pic {
+    display: none;
   }
   .about__container {
     padding: 0;

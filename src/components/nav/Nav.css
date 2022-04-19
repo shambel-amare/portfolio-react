@@ -5,9 +5,8 @@
   justify-content: center;
 }
 #nav {
-  background: #d7e5ff;
+  background: var(--color-logo);
   width: max-content;
-  display: block;
   padding: 0.7rem 1.2rem;
   z-index: 100;
   position: fixed;
@@ -18,13 +17,14 @@
   gap: 0.5rem;
   border-radius: 3rem;
   backdrop-filter: blur(1rem);
+  display: none;
 }
 nav a {
   background: transparent;
   padding: 0.9rem;
   border-radius: 50%;
   display: flex;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: var(--color-primary);
 }
 nav a:hover {
@@ -54,5 +54,8 @@ nav a.active {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+  }
+  #nav {
+    display: block;
   }
 }

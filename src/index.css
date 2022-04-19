@@ -1,17 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 :root {
-  --color-primary: #0084f8;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Josefin Slab", serif;
+  --color-primary: #0f9ff2;
+  --color-header: #3f3d56;
+
   --link-color: #0155f2;
   --color-secondary: #367cff;
-  --color-logo: #011439;
   --color-background: #f3f3f3;
+  --color-orange: #ff6000;
+  --color-logo: #011439;
+  --color-mask: #0114390b;
+
+  --color-background-2: #bbb3b38c;
+  --color-paragraph: #ebf1ffb6;
+  --color-after: #c4c4c4;
   --container-width-lg: 75%;
   --container-width-md: 85%;
   --container-height-sm: 90%;
   --color-white: #fff;
   --color-light-gray: #8ddbe0;
-  --color-light: rbga(1, 1, 1, 0.6);
-  --color-black: #0000;
+  --color-light: rgba(184, 182, 182, 0.774);
+  --color-black: rgba(0, 0, 0, 0.601);
+  --color-black-light: #061128d6;
   --color-ghost: #5a4ff3;
   --color-nav: #d7e5ff;
   --color-navactive: #a5c4ff;
@@ -36,7 +48,7 @@ html {
 }
 body {
   font-family: "Poppins", sans-serif;
-  background: var(--color-background);
+  background: var(--color-logo);
 }
 
 /* =======GENERAL CSS */
@@ -47,7 +59,6 @@ body {
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  margin-top: 2rem;
 }
 h1,
 h2,
@@ -57,15 +68,23 @@ h5 {
   font-weight: 500;
 }
 h1 {
+  font-family: Ubuntu;
   font-size: 2rem;
   color: var(--color-logo);
 }
 h2 {
+  font-family: Ubuntu;
   font-size: 1rem;
+  color: var(--color-white);
 }
 section {
+  margin: 3rem auto;
+  height: 100%;
+}
+section > #header {
   margin: 1rem auto;
-  height: auto;
+  padding: 0;
+  height: 100%;
 }
 section > h2,
 section > h1,
@@ -105,9 +124,9 @@ a:hover {
 }
 .btn:hover,
 .btn:focus {
-  background: var(--color-white);
+  background: var(--color-logo);
   border: 1px solid var(--color-primary);
-  color: var(--color-primary);
+  color: var(--color-background);
 }
 .btn-secondary {
   background: transparent;
@@ -116,14 +135,43 @@ a:hover {
 }
 .btn-secondary:hover,
 .btn-secondary:focus {
-  background: var(--color-white);
-  color: var(--color-logo);
+  background: var(--color-logo);
+  color: var(--color-background);
 }
 
 img {
   display: block;
   width: 100%;
   object-fit: cover;
+}
+
+.titlebar > :first-child {
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: 42px;
+  font-family: Ubuntu;
+  font-weight: 500;
+}
+.titlebar {
+  display: block;
+  position: relative;
+  padding-left: 1rem;
+}
+.titlebar > :nth-child(2) {
+  display: inline-block;
+  color: var(--color-white);
+  font-size: 2.5rem;
+  font-family: Ubuntu;
+  font-weight: 500;
+}
+.titlebar::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  left: 1rem;
+  bottom: 0;
+  width: 93%;
+  background: var(--color-after);
 }
 /* ========Media Queries for Tablet(Medium size devices) =======*/
 
@@ -140,7 +188,7 @@ img {
 }
 
 /* ========Media Queries for phones (small size devices)====== */
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .container {
     display: flex;
     width: 100%;
@@ -149,6 +197,9 @@ img {
     margin: 1rem auto;
   }
   .section {
+    margin: 1rem auto;
+    padding: 0 auto;
+    height: 100%;
     margin-bottom: 2rem;
   }
 }

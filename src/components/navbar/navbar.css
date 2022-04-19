@@ -2,15 +2,92 @@
   position: relative;
 }
 .navbar__container {
-  width: 100%;
-  height: 6rem;
-  top: 0;
-  margin-bottom: 1rem;
-  background: var(--color-primary);
   position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  justify-content: space-between;
+  width: 100%;
+  height: 4rem;
+  margin: 0 auto;
+  padding: 0 10rem;
+  margin-bottom: 1rem;
+  background: var(--color-logo);
+  box-shadow: 2px 2px 2px rgba(51, 50, 50, 0.3);
   z-index: 100;
-  transition: var(--transition);
+  transition: all 800ms ease;
 }
 .navbar__container.scrolled {
-  background: transparent;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  width: 100%;
+  height: 4rem;
+  margin: 0 auto;
+  padding: 0 10rem;
+  margin-bottom: 1rem;
+  background: var(--color-logo);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../../assets/logo-header.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: fit-content;
+  width: fit-content;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+.logo.scrolled {
+  background: url(../../assets/logo-header.svg);
+  background-size: 100%;
+
+  background-repeat: no-repeat;
+  height: fit-content;
+  width: fit-content;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+.header-tags {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header-tags > * {
+  padding-left: 4rem;
+  font-size: 1.25rem;
+  color: var(--color-background);
+}
+.header-tags > a:hover {
+  color: var(--color-primary);
+  background: var(--color-background);
+  border-radius: 0;
+}
+@media screen and (max-width: 1024px) {
+  /* .navbar__container {
+    justify-content: center;
+  }
+  .logo {
+    margin: 0.5rem 5rem;
+  }
+  .header-tags {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .header-tags > * {
+    padding-right: 2rem;
+    color: var(--color-primary);
+  } */
+}
+@media screen and (max-width: 600px) {
+  #myNav {
+    display: none;
+  }
 }
