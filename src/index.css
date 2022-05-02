@@ -34,6 +34,7 @@
 *::before {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   box-sizing: border-box;
   outline: 0;
   list-style: none;
@@ -107,6 +108,8 @@ a:hover {
   color: var(--color-white);
 }
 .btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   display: inline-block;
   background: var(--color-primary);

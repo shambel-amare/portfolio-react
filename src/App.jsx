@@ -7,7 +7,6 @@ import Skills from "./components/skills/Skills";
 import Footer from "./components/footer/Footer";
 import Nav from "./components/nav/Nav";
 import Navbar from "./components/navbar/Navbar";
-import Certificate from "./components/certificate/Certificate";
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
       <About />
       <Projects />
       <Skills />
-      <Certificate />
       <Contact />
       <Footer />
     </>
