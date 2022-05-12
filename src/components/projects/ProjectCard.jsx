@@ -19,11 +19,11 @@ const ProjectCard = ({ title, children, techstack }) => {
                 <div className="edu">{children}</div>
               </div>
               <div className="card-icon">
-                <a href="#">
+                <a href="https://house-marketplace-9cae2.web.app/">
                   <MdLiveHelp />
                   <h3>Live</h3>
                 </a>
-                <a href="#">
+                <a href="https://github.com/shambel-amare/house-listing-marketplace">
                   <AiOutlineGithub />
                   <h3>Github</h3>
                 </a>
