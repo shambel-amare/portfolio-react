@@ -48,7 +48,7 @@ const Contact = () => {
       <div className="container">
         <div className="title-container-cover">
           <div className="titlebar">
-            <h1>05: </h1>
+            <h1>04: </h1>
             <h1>Contact me</h1>
           </div>
         </div>

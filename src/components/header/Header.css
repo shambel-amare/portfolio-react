@@ -17,7 +17,8 @@
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .custom-shape-divider-bottom-1649547168 svg {
@@ -57,9 +58,7 @@
 h5 {
   color: var(--color-background);
 }
-.title-container {
-  padding-top: 6rem;
-}
+
 .title {
   letter-spacing: 0rem;
   display: flex;
@@ -154,6 +153,8 @@ h5 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   height: 100%;
   padding-right: 1rem;
